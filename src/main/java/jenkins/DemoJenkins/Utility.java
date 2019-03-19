@@ -13,11 +13,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Utility {
-
+	
 	public static WebDriver driver = null;
+	
 
 	public static void openBrowser(String browserName) {
-
+		
+		processWait();
 		browserName = browserName.toLowerCase();
 		if (browserName.startsWith("c")) {
 
@@ -28,7 +30,7 @@ public class Utility {
 	}
 
 	public static void processWait() {
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	}
 
 	public static void openUrl(String url) {
