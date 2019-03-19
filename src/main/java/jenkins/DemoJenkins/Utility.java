@@ -30,7 +30,7 @@ public class Utility {
 	}
 
 	public static void processWait() {
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	public static void openUrl(String url) {
